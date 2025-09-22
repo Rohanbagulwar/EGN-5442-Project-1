@@ -124,6 +124,7 @@ class ConnectFour:
         return positions
 
     def play(self):
+        ## Main driver code
         self.play_area = []
         for r in range(self.BOARD_ROWS + 1):
             row_array = []
@@ -135,7 +136,7 @@ class ConnectFour:
         self.display_board()
 
         current_mark = "X"
-
+        ## While loop started
         while True:
             print(f"\n {current_mark}'s turn.")
             print(f'Where do you want your {current_mark} placed?')
@@ -185,7 +186,7 @@ class ConnectFour:
                 print("\n DRAW! NOBODY WINS!")
                 break
 
-            # Switch players
+            # Flip the turns
             current_mark = "O" if current_mark == "X" else "X"
 
         again = input("\n Another game (y/n)? \n")
@@ -196,5 +197,7 @@ class ConnectFour:
 
 
 if __name__ == "__main__":
+
+    ## Main start of the code 
     game = ConnectFour()
     game.play()

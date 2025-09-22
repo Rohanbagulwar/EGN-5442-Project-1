@@ -94,7 +94,7 @@ class TicTacToe:
         if is_winner:
             return True
 
-        # check anti-diagonal
+        # check both sides of diagonal
         is_winner = True
         for i in range(self.BOARD_SIDE):
             if self.play_area[i][self.BOARD_SIDE - 1 - i] != mark:
@@ -106,7 +106,7 @@ class TicTacToe:
         return False
 
     def game_finished(self, mark):
-        # returns True if either player wins or board is filled (draw)
+        # returns True if either player wins or board is filled than draw
         if self.has_won(mark):
             return True
         if self.is_board_full():
@@ -114,7 +114,8 @@ class TicTacToe:
         return False
 
     def play(self):
-        # run interactive game loop
+        ## Main driver code
+        # run interactive game while loop
         self.clear_board()
         print("New Game: X goes first.\n")
         self.display_board()
@@ -169,5 +170,6 @@ class TicTacToe:
 
 
 if __name__ == "__main__":
+    ## Start of the code.
     game_instance = TicTacToe()
     game_instance.play()
