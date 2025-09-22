@@ -17,9 +17,9 @@ cd EGN-5442-Project-1
 
 ### Run Tic-Tac-Toe game
 ```bash
-python tic_tac_toe.py
+python RB-tic-tac-toe.py
 ```
 ### Run Connect-four game
 ```bash
-connect-four.py
+RB_connect_four.py
 ```
